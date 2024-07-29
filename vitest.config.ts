@@ -4,12 +4,8 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   test: {
-    browser: {
-      enabled: true,
-      name: 'chromium',
-      provider: 'playwright',
-      // https://playwright.dev
-      providerOptions: {},
-    },
+    environment: 'jsdom',
+    setupFiles: 'src/__tests__/setup-tests.ts',
+    globals: true
   },
 })
