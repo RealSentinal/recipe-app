@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@editorjs/editorjs": "^2.30.2",
+    "@radix-ui/react-avatar": "^1.1.0",
+    "@radix-ui/react-slot": "^1.1.0",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "class-variance-authority": "^0.7.0",
