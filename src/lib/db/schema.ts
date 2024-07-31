@@ -2,7 +2,7 @@ import { pgTable, text, timestamp, varchar, makePgArray, json, bigint } from "dr
 
 export const userTable = pgTable("user", {
     id: text("id").primaryKey(),
-    username: varchar("username", {length: 64}).notNull(),
+    username: varchar("username", {length: 64}).notNull().unique(),
     hashed_password: text("hashed_password").notNull(),
     saved_recipes: text("saved_recipes").array()
 })

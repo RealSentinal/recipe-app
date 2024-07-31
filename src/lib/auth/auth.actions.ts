@@ -26,6 +26,7 @@ export const getUser = cache(async () => {
     } catch (error) {
         if (error instanceof Error) console.log(error.message);
     }
+    return user;
 })
 
 export async function signup(username: string, password: string){

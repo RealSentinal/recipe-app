@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Bookmark, Compass, Search } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -18,13 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='w-screen h-screen bg-background'>
+      <body className={cn('w-screen h-screen bg-background', outfit.className)}>
         {children}
         <div className="fixed bottom-0 w-screen h-fit flex flex-row bg-background-3">
           <Button className="bg-background-3 text-white w-full text-xs"><Compass /></Button>
           <Button className="bg-background-3 text-white w-full text-xs"><Bookmark /></Button>
           <Button className="bg-background-3 text-white w-full text-xs"><Search /></Button>
-          <Button className="bg-background-3 text-white w-full text-xs"><img src="https://avatars.githubusercontent.com/u/124599?v=4" alt="avatar" /></Button>
+          <Button className="bg-background-3 text-white w-full text-xs"><img src="https://avatars.githubusercontent.com/u/124599?v=4" alt="avatar" width={32} height={32}/></Button>
         </div>
       </body>
     </html>
