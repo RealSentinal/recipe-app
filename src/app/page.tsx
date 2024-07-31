@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { RecipeData } from '@/app/data/TestData'
 import Image from 'next/image'
-import { Eye, Heart, Bookmark } from 'lucide-react'
+import { Eye, Heart, Bookmark, Search } from 'lucide-react'
 
 export default function Home() {
 
@@ -15,7 +15,10 @@ export default function Home() {
           Find your next cooking adventure or write your own recipes
         </h2>
         <Button className="bg-primary w-6/12 mb-2 rounded-3xl">Create your own</Button>
-        <Input placeholder="Search for recipes" className="bg-background-3 rounded-3xl placeholder:pl-4" />
+        <div className="relative">
+          <Search className="w-5 h-5 absolute top-[10px] left-3 text-foreground/50" />
+          <Input placeholder="Search for recipes" className="bg-background-3 rounded-3xl pl-10" />
+        </div>
       </div>
       <div className="w-fit m-2">
         <Button className="bg-primary h-8 rounded-3xl">All</Button>

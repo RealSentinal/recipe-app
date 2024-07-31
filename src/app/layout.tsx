@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Outfit } from "next/font/google";
 import "./globals.css";
@@ -24,7 +25,9 @@ export default function RootLayout({
           <Button className="bg-background-3 text-white w-full text-xs"><Compass /></Button>
           <Button className="bg-background-3 text-white w-full text-xs"><Bookmark /></Button>
           <Button className="bg-background-3 text-white w-full text-xs"><Search /></Button>
-          <Button className="bg-background-3 text-white w-full text-xs"><img src="https://avatars.githubusercontent.com/u/124599?v=4" alt="avatar" /></Button>
+          <Button className="bg-background-3 text-white w-full text-xs">
+            <img src="https://avatars.githubusercontent.com/u/124599?v=4" width={30} height={30} className="rounded-full" alt="avatar" />
+          </Button>
         </div>
       </body>
     </html>
